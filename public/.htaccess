@@ -1,0 +1,10 @@
+#mandando as requisicoes para index.php
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [NC,L]
+</IfModule>
+
+#bloqueando tentativa de acesso aos diretórios e arquivos pela url 
+Options All -Indexes
